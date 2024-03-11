@@ -3,10 +3,11 @@
     margin: 0;
 }
 
+/* 체크박스를 보이지 않게 */
 input[type=checkbox]{
     display: none;
 }
-
+/* 그저 버튼 디자인 */
 .btn{
     display: block;
     width: 120px;
@@ -15,7 +16,7 @@ input[type=checkbox]{
     text-align: center;
     line-height: 40px;
 }
-
+/* 모달창 위치 잡고 숨기기 */
 .modalBox{
     position: absolute;
     top: 50%;
@@ -26,13 +27,52 @@ input[type=checkbox]{
     border: 2px solid black;
     display: none;
 }
-
+/* 닫기 버튼 위치 */
 .close{
     position: absolute;
     top: 0;
     right: 0;
 }
-
+/* #modal이라는 아이가 체크되면~ 모달박스를 보이게 해주세요~ 라는 코드 */
 #modal:checked~.modalBox{
     display: block;
 }
+
+/* 그저 버튼 디자인 */
+a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 120px;
+    height: 40px;
+    background-color: lightpink;
+    text-align: center;
+    line-height: 40px;
+}
+/* 모달창 위치 잡고 숨기기 */
+#modalBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+    display: none;
+}
+/* 닫기 버튼 위치 */
+#modalBox a{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/* 타겟을 누르면 페이지를 여는 것과 비슷한 동작이 실행되는데
+그래서 #modalBox를 누르면 모달창이 보이고 닫기 버튼을 누르면
+새로운 타겟이 실행되는데 #none은 크기가 0이라서 보이지 않기에
+모달창이 닫히는 것처럼 보이는 효과  */
+#modalBox:target{
+    display: block;
+}
+
+
+
