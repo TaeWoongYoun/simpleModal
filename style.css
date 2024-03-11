@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+.btn{
+    display: block;
+    width: 120px;
+    height: 40px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 40px;
+}
+
+.modalBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+    display: none;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#modal:checked~.modalBox{
+    display: block;
+}
